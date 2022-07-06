@@ -1,0 +1,34 @@
+
+.slick-current .slider{
+    border: 3px solid #ffe409;
+
+}
+.slider-container {
+    text-align: right;
+}
+
+.slick-dots  {
+    bottom: -40px;
+    li button {
+        border-radius: 50%;
+        border: 1px solid #167893;
+        &:before {
+            content: "";
+        }
+    }  
+    
+   
+    .slick-active button {
+        background-color: #167893;
+    }
+}
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .slick-list {
+        display: none;
+    }
+
+}

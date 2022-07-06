@@ -1,0 +1,450 @@
+@import "_variables.scss";
+@import "_sidebar.scss";
+@import "_slick.scss";
+@import "_block.scss";
+
+
+
+@font-face {
+    font-family: 'AgencyFB Bold';
+    src: url('../fonts/AgencyFB-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('../fonts/AGENCYR.TTF');
+}
+
+.wrapper {
+    background-color: $background-color;
+    display: flex;
+    .left-section {
+        position: absolute;
+        top: 125px;
+        bottom: 0;
+        left: 0;
+        width: 168px;
+        box-shadow:  0 0 181px 0 #212643 inset, 2px 8px rgba(0,0,0, 0.17);
+        border-right: 2px solid #202540;
+        text-align: center;
+
+       
+    }
+    .right-section {
+        padding-left: 168px;
+        width: 100%;
+        position: relative;
+        .digital {
+            background: url(../img/digital.png) no-repeat center center;
+            width: 171px;
+            height: 342px;
+            position: absolute;
+            top: 0;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+            &.left {                
+                left: 200px;
+            }
+            &.right { 
+                right: 0;
+            }
+        }
+    }
+    .right-container {
+        //padding-left: 168px;
+        //background: url("../img/BG.png") no-repeat #171a26;
+        max-width: 1386px;
+        margin: 0 auto;
+        width: 1386px;
+        @media screen and (max-width: 1280px) {
+            width: 980px;            
+        }
+        
+    }
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        .text {
+            font-size: 60px;
+            color: #ef7600;
+        }
+        .balance {
+            border-radius: 36px;
+            background-color: #17334d;
+            display: flex;
+            align-items: center;
+            height: 76px;
+            .logo-balance {
+                padding: 0 16px;
+                margin: 0 8px;
+            }
+            .value {
+                width: 150px;
+                padding: 0 8px;
+                font-size: 32px;
+                text-align: center;
+            }
+        }
+    }
+    .logo {
+        text-align: center;
+        width: 200px;
+        height: 125px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        box-shadow:  0 0 181px 0 #212643 inset, 2px -30px 8px rgba(0,0,0, 0.17);
+        border-right: 2px solid #202540;
+        display: flex;
+        align-items: center;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 84% 100%, 0% 100%);
+        .img {
+            background-image: url("../img/WWW.svg");
+            width: 93px;
+            height: 93px;
+            position: relative;
+            margin-left: -47px;
+            left: 50%;
+            display: block;
+        }
+        
+    }
+}
+body {
+    font-family: 'AgencyFB', arial;
+    color: #fff;
+    margin: 0;
+}
+.menu-mobile {
+    display: none;
+}
+.menu {
+    padding-left: 0;
+    .menu-item {
+        padding: 15px 0;
+        position: relative;
+        &:hover, &.active {
+            &:before{
+                content: "";
+                background-image: url("../img/active-menu.svg");
+                width: 188px;
+                height: 84px;
+                background-size: 188px 84px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .text {
+            font-size: 20px;
+            color: $textcolor;
+        }
+        .icon {
+            display: block;
+            position: relative;
+            margin-left: 50%;
+        }
+        .icon-about {
+            width: 36px;
+            height: 36px;
+            background-image: url("../img/about-icon.svg");
+            background-size: 36px 36px;            
+            left: -18px;
+        }
+        .icon-gamehub {
+            width: 41px;
+            height: 28px;
+            background-image: url("../img/gamehub-icon.svg");
+            background-size: 41px 28px;
+            left: -20px;
+        }
+        .icon-team {
+            width: 36px;
+            height: 21px;
+            background-image: url("../img/team-icon.svg");
+            background-size: 36px 21px;
+            left: -18px;
+        }
+        .icon-roadmap {
+            width: 40px;
+            height: 30px;
+            background-image: url("../img/roadmap-icon.svg");
+            background-size: 40px 30px;
+            left: -20px;
+        }
+        .icon-tokenomics {
+            width: 30px;
+            height: 33px;
+            background-image: url("../img/tokenomic-icon.svg");
+            background-size: 30px 33px;
+            left: -15px;
+        }
+        .icon-market {
+            width: 36px;
+            height: 36px;
+            background-image: url("../img/market-icon.svg");
+            background-size: 36px 36px;
+            left: -18px;
+        }
+        .icon-whitepaper {
+            width: 32px;
+            height: 42px;
+            background-image: url("../img/whitepaper-icon.svg");
+            background-size: 32px 42px;
+            left: -16px;
+        }
+        .icon-home {
+            width: 32px;
+            height: 26px;
+            background-image: url("../img/home-icon.svg");
+            background-size: 32px 26px;
+            left: -16px;
+        }
+    }
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.banner-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .banner {
+        &__mask {
+            position: absolute;
+            background: url("../img/mark-banner.png") no-repeat;
+            width: 827px;
+            height: 257px;
+            left: -42px;
+            top: 140px;
+            padding: 30px 0 30px 30px;
+            .txt {
+                color: #fff;
+            }
+            .large {
+                font-size: 37px;
+                line-height: 40px;
+                margin-bottom: 30px;
+            }
+            .medium {
+                font-size: 30px;
+            }
+            .name-game {
+                display: none;
+            }
+        }
+    }
+    .img-banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.slider {
+    width: 204px !important;
+    height: 130px;
+    border: 2px solid #8aa1ff;
+    margin-bottom: -4px;
+}
+
+.footer {
+    .right {
+        text-align: right;
+        border-bottom: 1px solid #2f3555;
+        padding: 4px 0
+    }
+    .icon {
+        width: 58px;
+        height: 59px;
+        background-size: 58px 59px;
+        display: inline-block;
+        margin-right: 8px;
+        &.icon1 {
+            background-image: url("../img/footer-icon-Polygon.svg");
+        }
+        &.icon2 {
+            background-image: url("../img/footer-icon-wade.svg");
+        }
+        &.icon3 {
+            background-image: url("../img/footer-icon-pintest.svg");
+        }
+        &.icon4 {
+            background-image: url("../img/footer-icon-tiwter.svg");
+        }
+        &.icon5 {
+            background-image: url("../img/footer-icon-fb.svg");
+        }
+    }
+    .small-block {
+        width: 48px;
+        height: 68px;
+        background-color: #2f3555;
+        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+        display: inline-block;
+        position: relative;
+        top: 10px;
+        margin-right: 8px;
+    }
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4px;
+        font-size: 30px;
+    }
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    .wrapper .right-container {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+        .top-section .balance {
+            height: 100px;
+            border-radius: 58px;
+        }
+    }
+
+    .block-who .block__content .profile-wrapper .profile .desc {
+        font-size: 23px;
+        line-height: 28px;
+        width: 220px;
+        top: 182px;
+        left: 87px;
+    }
+
+    .block-who .block__content .profile-wrapper {
+        left: -40px;
+    }
+   
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .wrapper .right-container {
+        width: 100%;
+        padding: 0 8px 150px;
+    }
+
+    .menu-mobile {
+        margin-top: 50px;
+        overflow: auto;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        .arrow {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .arr-next {
+            position: fixed;
+            right: 8px;
+            bottom: 12px;
+            &:before {
+                content: "\003E";
+                color: #1c444c;
+            }
+        }
+        .arr-prev {
+            position: fixed;
+            left: 8px;
+            bottom: 12px;
+            &:before {
+                content: "\003C";
+                color: #1c444c;
+            }
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(8, 120px);
+            align-items: center;
+            margin-bottom: 0;
+            list-style: none;
+            padding: 0 20px;
+            .menu-item {
+                justify-self: center;
+                align-items: center;
+                &.active, &:hover {
+                    &:before {
+                        left: -77px;
+                        top: -43px;
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        .left-section, .top-section, .logo{
+            display: none;
+        }
+        .right-section {
+            padding-left: 0;
+        }
+        overflow-x: hidden;
+    }
+
+    .banner-section {
+        .banner__mask {
+            background-image: none;            
+            width: unset ;
+            height: unset;
+            left: 0;
+            top: unset;
+            bottom: 28px;
+            padding: 0 8px;
+            .large {
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 12px;
+            }
+            .medium {
+                font-size: 20px;
+            }
+            .name-game {
+                display: block;
+                font-size: 30px;
+                color: #ef7600;
+            }
+           
+        }
+        .img-banner {
+            position: relative;
+        }
+    }
+
+    .footer {
+        .copyright {
+            font-size: 13px;
+            padding: 0;
+        }
+        .icon {
+            width: 28px;
+            height: 28px;
+            background-size: 28px 28px;
+        }
+        .small-block {
+            width: 24px;
+            height: 34px;
+            top: 6px;
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 59" width="58" height="59">
+	<title>Polygon 2</title>
+	<defs>
+		<image  width="58" height="59" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA7CAMAAAAdOWm/AAAAAXNSR0IB2cksfwAAAR1QTFRFmBERmBERmBERmBERmBERmBERmBERmBERmBERmBER4ry8pzQ0mBER/////fn50JOTnRwc9ejovWdnmBISmBER6MnJrD8//v391Z6eoCQk+O/vw3R0mhUV7NLSsUxM//7+26ysoyoq+vT0yYODmhcX8N3dtldX4bq6pzMzz4+P9OfnvGRk5sXF/fv71JycoCMj9+zswnNzmRMT1Jubvmho/Pj40ZSUnR0d+fHx476+qTg48uLiuV1d+/f3zIiInBkZ3rOzpS8v79ratVNTx3192qmpoigomBER69HRsEhI9+3t6MrK3bGxmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERmBERnLaHQQAAAF90Uk5T1//A5cTky9/K3v//3f/////////g///////////////////////////////////////////////////////////////////M///////F3MI6U0JPUElGR05NSExLUTLJKl6/AAABOklEQVR4nO3WV08CURAF4LsWVPQsVSyoIAoqduxdULFhBRFs//9nqIlZ9d7ZZTK8Ec7jJF/u3ezZySplCdOhOqW0S3VLqU/1SGlvm7Yo7dMm/n4m9akBbQI7EGRS/cIAQuEIi0ZNCgzGhKd+ZWh4REqB0fiYNzVfDpyMT4gpEslJKQVSU9NSCqQzYgrMzIop7DmyXhwKZOeJevEosGDWi0uxuLQspcDKak5KgTUpDa1HGtANGtqbWw2fdZuUO7uWHh7d2zcgjx4cHhGSQ4/zFGTQwgkNqWX6j6ZO3b9XT5o4K7pCyzo3lukvvbj0gF7PehXPkeLPhWnK2MMup14ztj9J9aKzqVl0Li2ZRedSdtq0VWkT//5ieqNupfRO3T88lis/eao+OynXnHHdGb9UXyu179Fb/f2jCfoJp4xaeYVy58QAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Polygon 2" href="#img1" x="0" y="0"/>
+</svg>

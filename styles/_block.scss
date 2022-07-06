@@ -1,0 +1,772 @@
+.block {
+    position: relative;
+    margin-top: 20px;
+    &__title {
+        width: 480px;
+        text-transform: uppercase;
+        color: #ff6d02;
+        font-size: 54px;
+        font-family: "AgencyFB Bold";
+        position: relative;
+        display: flex;
+        margin-bottom: 20px;
+        &:before {
+            position: absolute;
+            content: url("../img/bg-gamehub.png");
+            left: -86px;
+            top: -42px;
+        }
+        .sign-line {
+            display: flex;
+            position: absolute;
+            right: 2px;
+            .line {
+                background-color: #743518;
+                height: 64px;    
+                margin-left: -6px;  
+                
+                &1 {
+                    width: 25px;
+                    clip-path: polygon(55% 0%, 100% 0%, 45% 100%, 0% 100%);
+                }
+                &2, &3 {
+                    width:20px;
+                    clip-path: polygon(65% 0%, 100% 0%, 35% 100%, 0% 100%);
+                }
+            }
+        }
+    }
+    &__line {    
+        display: grid;
+        grid-template-columns: 480px 18px 1fr;
+        position: absolute;
+        top: 0;   
+        width: 100%; 
+        .block1 {
+            border-bottom: 1px solid #ff6d02;
+        }
+        .block2 {
+            background-color: #ff6d02;
+            height: 78px;
+            clip-path: polygon(96% 0, 100% 0, 4% 100%, 0% 100%);
+        }
+        .block3 {
+            border-top: 1px solid #ff6d02;
+            color: #7d8dcc;
+            font-size: 51px;
+            padding-left: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .view-all {
+                color: #ffe035;
+                font-size: 40px;
+            }
+        }
+    }
+    &__content {
+        .wrapper_block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 48px 48px;
+        }
+        .block_item{
+            width: 430px;
+            height: 362px;
+            border: 2px solid #959db3;
+            position: relative;
+            margin-bottom: 100px;
+            .img {
+                width: 100%;
+                height: 100%;
+            }
+            &.item1  .img{
+                background: url("../img/block1.png") no-repeat;
+            }
+            &.item2  .img{
+                background: url("../img/block2.png") no-repeat;
+            }
+            &.item3  .img{
+                background: url("../img/block3.png") no-repeat;
+            }
+            &.item4  .img{
+                background: url("../img/block4.png") no-repeat;
+            }
+            &.item5  .img{
+                background: url("../img/block5.png") no-repeat;
+            }
+            &.item6  .img{
+                background: url("../img/block6.png") no-repeat;
+            }
+
+            .tag {
+                background-image: url("../img/tag.svg");
+                width: 358px;
+                height: 68px;
+                background-size: 358px 68px;
+                position: absolute;
+                bottom: -2px;
+                left: -20px;
+                font-size: 42px;
+                font-family: "AgencyFB Bold";
+                color: #fff;
+                padding-left: 20px;
+            }
+            .bottom {
+                position: relative;
+                display: flex;
+                .ex {
+                    position: absolute;
+                    width: 230px;
+                    height: 104px;
+                    background-size: 230px 104px;
+                    color: #5666a0;
+                    font-size: 32px;
+                    text-align: center;
+                    line-height: 100px;
+                    &.detail {
+                        left: 0;
+                        background-image: url("../img/detail-bg.svg");                        
+                    }
+                    &.play {
+                        right: 0;
+                        background-image: url("../img/play-bg.svg");
+                    }
+                }
+            }
+        }
+    }
+}
+.block-gamehub {
+    margin-top: 60px;
+    .block__content .txt-mobile {
+        display: none;
+        color: #7d8dcc;
+        font-size: 27px;
+        padding: 16px 0;
+    }
+}
+.block-NTFS {
+    position: relative;
+    .bg-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .ntf {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 399px 1fr;       
+        .desc { 
+            width: calc(100% - 40px);  
+            border: 1px solid #254d9b;
+            background-color: rgba(0, 66, 234, 0.13);
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.82);
+            .content {
+                padding: 12px 60px 0;
+                font-size: 40px;
+                color: #fff;
+                line-height: 42px;  
+                display: block;
+                padding: 16px 20px;
+            }   
+            .title {
+                background: url("../img/title-desc-ntf.svg");
+                width: 423px;
+                height: 80px;
+                background-size: 423px 80px;
+                color: #fff;
+                font-size: 65px;
+                padding-left: 24px;
+                display: block;
+            }     
+        }
+    }
+}
+
+.block-token {
+    .block__content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        .img {
+            background-image: url("../img/token-img.svg");
+            width: 405px;
+            height: 582px;
+            background-size: 405px 582px;
+            position: relative;
+            top: -50px;
+        }
+        .desc {
+            font-size: 40px;
+            color: #fff;
+        }
+    }
+}
+
+.block-tokenomics {
+    .block__content {
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        .img {
+            position: relative;
+            margin-bottom: 32px;
+            .desc {
+                color: #fff;
+                font-size: 28px;
+                position: absolute;
+                bottom: -30px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .tbl-block {
+            .txt {
+                font-size: 36px;
+                line-height: 40px;
+            }
+            .table-right table {
+                //border: 1px solid #272e49;
+                font-size: 22px;
+                tr th, tr td {
+                    border: 1px solid #272e49;
+                    padding: 8px;
+                }
+                tfoot th {
+                    color: #1fffe7;
+                }
+                thead tr th {
+                    background-color: #1d2238;
+                    border: none;
+                }
+            }
+        }
+
+    }
+}
+
+.block-roadmap {
+    position: relative;
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .block__title {
+        width: 100%;       
+        display: flex;
+        justify-content: center;
+        &:before {
+            content: none;
+           
+        }
+        .text {
+            position: relative;
+            width: 200px;
+            text-align: center;
+            &:before {
+                position: absolute;
+                content: url("../img/bg-gamehub.png");
+                left: -100px;
+                top: -59px;
+            }
+           
+        }
+    }
+    .block__content {
+        font-size: 27px;
+        position: relative;
+        line-height: 38px;
+        .img {
+            overflow: auto;
+            position: relative;
+        }
+        .roadmap2 {
+            background-image: url("../img/roadmap-detail2.png");
+            width: 359px;
+            height: 574px;
+            padding-left: 30px;
+            position: absolute;
+            left: 570px;
+            padding-top: 10px;
+            top: 50px;
+            color: #56ecf9;
+           
+        }
+        .roadmap1, .roadmap3 {
+            background-image: url("../img/roadmap-detail1.png");
+            width: 251px;
+            height: 98px;
+            padding-left: 20px;
+            position: absolute;
+            line-height: 32px;
+            .more {
+                color: #00bdff;
+                font-size: 22px;
+                display: block;
+                .arr-sec {
+                    display: inline-block;
+                    padding-left: 12px;
+                    vertical-align: middle;
+                }
+                .arrow {                    
+                    margin-left: -6px;
+                    &:before {
+                        content: "\003E";
+                    }
+                }
+            }
+        }
+        .roadmap1 {
+            left: 230px;
+            top: 400px;
+        }
+        .roadmap3 {
+            right: 97px;
+            top: 230px;
+        }
+    }
+}
+
+.block-partner {
+    .block__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);    
+        grid-row-gap: 30px;
+        [class*="logo"] {
+            align-self: center;
+            justify-self: center;
+        }    
+        .logo1 {
+            background: url("../img/logo-genblock.svg");
+            width: 260px;
+            height: 134px;
+            background-size: 260px 134px;
+        }
+        .logo2 {
+            background: url("../img/logo-ascensive.svg");
+            width: 216px;
+            height: 146px;
+            background-size: 216px 146px;
+        }
+        .logo3 {
+            background: url("../img/logo-labs.svg");
+            width: 276px;
+            height: 96px;
+            background-size: 276px 96px;
+        }
+        .logo4, .logo8 {
+            background: url("../img/logo-499.svg");
+            width: 268px;
+            height: 110px;
+            background-size: 268px 110px;
+        }
+        .logo5 {
+            background: url("../img/logo-delpi.svg");
+            width: 292px;
+            height: 100px;
+            background-size: 292px 100px;
+        }
+        .logo6 {
+            background: url("../img/logo-bitk.svg");
+            width: 247px;
+            height: 126px;
+            background-size: 247px 126px;
+        }
+        .logo7 {
+            background: url("../img/logo-animal.svg");
+            width: 256px;
+            height: 147px;
+            background-size: 256px 147px;
+        }
+
+    }
+}
+
+.block-who {
+    .block__content {
+        .txt {
+            font-size: 50px;
+            line-height:50px;
+        }
+        .profile-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .profile {
+                position: relative;
+                .desc{
+                    font-size: 32px;
+                    position: absolute;
+                    top: 316px;
+                    left: 150px;
+                    width: 300px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .menu-bottom {
+            margin-top: 30px;
+            display: flex;
+            .section {
+                margin-right: 60px;
+                font-size: 41px;
+                .title {
+                    border-bottom: 1px solid #1f5b63;
+                    padding-bottom: 4px;
+                    
+                }
+                .content {
+                    margin-top: 20px;
+                    .item {
+                        display: block;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    .block__line .block3 {
+        font-size: 42px;
+        .view-all {
+            font-size: 28px;
+        }
+    }
+
+    .block-gamehub {
+        .block__content  {
+            .wrapper_block {
+                grid-gap: 24px 24px;
+            }
+            
+            .block_item {
+                width: 300px;
+                height: 240px;
+                .bottom .ex {
+                    width: 140px;
+                    height: 62px;
+                    background-size: 140px 62px;
+                    line-height: 56px;
+                }
+            }
+            
+            
+        }      
+        .block__line{
+            .txt {
+                font-size: 30px;
+            }
+            
+            .block3 {
+                justify-content: flex-end;
+            }
+        }  
+    }
+
+
+
+
+    .block-token .block__content  {
+       
+        .desc {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        .img {
+            width: 355px;
+            height: 482px;
+            background-size: 355px 482px;
+            top: 0;
+        }
+    }
+
+    .block-tokenomics .block__content  {
+        margin-top: 48px;
+        grid-template-columns: 1fr;
+        .tbl-block .table-right table {
+            font-size: 17px;
+            width: 100%;
+        }
+        .tbl-block .txt {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    .block-who .block__content   {
+        .menu-bottom .section {
+            font-size: 17px;
+        }
+        .txt {
+            font-size: 25px;
+            line-height: 30px;
+        }
+        .profile-wrapper .profile .desc {
+            font-size: 25px;
+            line-height: 30px;
+            width: 250px;
+            top: 220px;
+            left: 102px;
+        }
+        .profile-wrapper {
+            position: relative;
+            left: -20px;
+            margin-top: 8px
+        }
+    }
+
+    .block-partner .block__content{ 
+        .logo1 {
+            width: 130px;
+            height: 67px;
+            background-size: 130px 67px;
+        }
+        .logo2 {
+            width: 108px;
+            height: 73px;
+            background-size: 108px 73px;
+        }
+        .logo3 {
+            width: 138px;
+            height: 48px;
+            background-size: 138px 48px;
+        }
+        .logo4, .logo8 {
+            width: 134px;
+            height: 55px;
+            background-size: 134px 55px;
+        }
+        .logo5 {
+            width: 146px;
+            height: 50px;
+            background-size: 146px 50px;
+        }
+        .logo6 {
+            width: 123px;
+            height: 63px;
+            background-size: 123px 63px;
+        }
+        .logo7 {
+            width: 128px;
+            height: 73px;
+            background-size: 128px 73px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) { 
+    .block-gamehub .block__content {
+        .block_item {
+            width: 260px;
+            height: 180px;
+            .tag {
+                width: 179px;
+                height: 34px;
+                background-size: 179px 34px;
+                font-size: 24px;
+                left: -10px;
+                padding-left: 10px;
+            }
+        } 
+        .txt-mobile {
+            display: block;
+        }      
+       
+        .wrapper_block {
+            grid-gap: 8px 8px;
+        }
+    }
+    .block-gamehub .block__line .txt {
+        display: none;
+    }
+
+    .block-NTFS .ntf .desc .title {
+        width: 323px;
+        height: 60px;
+        background-size: 323px 60px;
+        font-size: 45px;
+    }
+    .block-roadmap .block__content .roadmap3 {
+        right: -464px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .block__title {
+        font-size: 30px;
+        width: 330px;
+    }
+    .block__line .block2  {
+        height:48px;
+    }
+    .block__title .sign-line .line {
+        height: 40px;
+    }
+    .block__line {
+        grid-template-columns: 330px 18px 1fr;
+        .block3 {
+            justify-content: flex-end;
+        }
+    }
+    .block-tokenomics {
+        .block__content {
+            display: block;
+            .tbl-block .table-right table {
+                width: 100%;
+            }
+        }
+    }
+    .block-roadmap .block__content {
+        width: 100%;
+    }
+    .block-gamehub {
+        .block__content  {
+            .wrapper_block {
+                width: 100vw;
+                overflow: auto;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr;
+            }
+            
+            .block_item {
+                width: 320px;
+                height: 280px;
+                .bottom .ex {
+                    width: 169px;
+                    height: 90px;
+                    background-size: 169px 90px;
+                    line-height: 83px;
+                    font-size: 24px;
+                }
+                .tag {
+                    line-height: 61px;
+                    font-size: 32px;
+                }
+            }
+
+            .txt-mobile {
+                display: block;
+                color: #7d8dcc;
+                font-size: 27px;
+                padding: 16px 0;
+            }
+            
+        }      
+        .block__line .txt {
+            display: none;
+        }  
+    }
+    .block-NTFS {
+        .block__content {
+            margin-top: 32px;
+        }
+        .ntf{
+            grid-template-columns: 200px 1fr;
+            .desc {
+                width: calc(100% - 16px);
+                
+                .content {
+                    font-size: 25px;
+                    line-height:32px;
+                    
+                }
+                .title {
+                    font-size: 35px;
+                    padding-left: 20px;
+                    width: 209px;
+                    height: 45px;
+                    background-size: 230px 45px;
+                }
+                
+            }
+            
+        }
+    }
+
+    .block-token .block__content  {
+       
+        .desc {
+            font-size: 25px;
+            line-height: 32px;
+        }
+        .img {
+            width: 355px;
+            height: 482px;
+            background-size: 355px 482px;
+            top: 0;
+        }
+    }
+
+    .block-tokenomics .block__content  {
+        margin-top: 48px;
+        .tbl-block .table-right table {
+            font-size: 17px;
+           
+        }
+        .tbl-block .txt {
+            font-size: 25px;
+            line-height: 32px;
+        }
+    }
+    .block-roadmap .block__content {
+        width: 100vw;
+        overflow-x: scroll;
+    }
+
+    .block-partner .block__content{ 
+        .logo1 {
+            width: 130px;
+            height: 67px;
+            background-size: 130px 67px;
+        }
+        .logo2 {
+            width: 108px;
+            height: 73px;
+            background-size: 108px 73px;
+        }
+        .logo3 {
+            width: 138px;
+            height: 48px;
+            background-size: 138px 48px;
+        }
+        .logo4, .logo8 {
+            width: 134px;
+            height: 55px;
+            background-size: 134px 55px;
+        }
+        .logo5 {
+            width: 146px;
+            height: 50px;
+            background-size: 146px 50px;
+        }
+        .logo6 {
+            width: 123px;
+            height: 63px;
+            background-size: 123px 63px;
+        }
+        .logo7 {
+            width: 128px;
+            height: 73px;
+            background-size: 128px 73px;
+        }
+    }
+
+    .block-who .block__content {
+        .profile-wrapper .profile .desc {
+            font-size: 20px;
+            line-height: 22px;
+            width: 200px;
+            top: 163px;
+            left: 80px;
+        }
+    }
+
+
+    
+}
+
